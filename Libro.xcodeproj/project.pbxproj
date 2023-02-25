@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C40C8F9529A6078000447FAB /* LibroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C8F9429A6078000447FAB /* LibroApp.swift */; };
-		C40C8F9729A6078000447FAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C8F9629A6078000447FAB /* ContentView.swift */; };
+		C40C8F9729A6078000447FAB /* MTLCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C8F9629A6078000447FAB /* MTLCanvasView.swift */; };
 		C40C8F9929A6078100447FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40C8F9829A6078100447FAB /* Assets.xcassets */; };
 		C40C8F9D29A6078100447FAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40C8F9C29A6078100447FAB /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		C40C8F9129A6078000447FAB /* Libro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Libro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40C8F9429A6078000447FAB /* LibroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroApp.swift; sourceTree = "<group>"; };
-		C40C8F9629A6078000447FAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C40C8F9629A6078000447FAB /* MTLCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTLCanvasView.swift; sourceTree = "<group>"; };
 		C40C8F9829A6078100447FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C40C8F9A29A6078100447FAB /* Libro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Libro.entitlements; sourceTree = "<group>"; };
 		C40C8F9C29A6078100447FAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				C40C8F9429A6078000447FAB /* LibroApp.swift */,
-				C40C8F9629A6078000447FAB /* ContentView.swift */,
+				C40C8F9629A6078000447FAB /* MTLCanvasView.swift */,
 				C40C8F9829A6078100447FAB /* Assets.xcassets */,
 				C40C8F9A29A6078100447FAB /* Libro.entitlements */,
 				C40C8F9B29A6078100447FAB /* Preview Content */,
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C40C8F9729A6078000447FAB /* ContentView.swift in Sources */,
+				C40C8F9729A6078000447FAB /* MTLCanvasView.swift in Sources */,
 				C40C8F9529A6078000447FAB /* LibroApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,8 +275,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -311,8 +310,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";

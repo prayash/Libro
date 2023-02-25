@@ -11,7 +11,14 @@ import SwiftUI
 struct LibroApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VStack {
+                MTLCanvasView()
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundColor(.accentColor)
+                Text("Hello, world!")
+            }
+            .padding()
         }
     }
 }
