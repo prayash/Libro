@@ -37,15 +37,16 @@ struct MTLCanvasView: NSViewRepresentable {
                 return
             }
             
-            guard let rpd = view.currentRenderPassDescriptor else {
+            guard let renderDescriptor = view.currentRenderPassDescriptor else {
                 return
             }
             
-            rpd.colorAttachments[0].clearColor = MTLClearColorMake(0, 1, 0, 1)
-            rpd.colorAttachments[0].loadAction = .clear
-            rpd.colorAttachments[0].storeAction = .store
-            let encoder = commandBuffer.makeRenderCommandEncoder(descriptor: rpd)
-            encoder?.endEncoding()
+            renderDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0, 1, 0, 1)
+            renderDescriptor.colorAttachments[0].loadAction = .clear
+            renderDescriptor.colorAttachments[0].storeAction = .store
+            let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderDescriptor)
+            renderEncoder?.endEncoding()
+            
             commandBuffer.present(drawable)
             commandBuffer.commit()
         }
@@ -63,6 +64,8 @@ struct MTLCanvasView: NSViewRepresentable {
         if let metalDevice = MTLCreateSystemDefaultDevice() {
             mtkView.device = metalDevice
         }
+        
+        mtkView.isPaused = false
         mtkView.framebufferOnly = false
         mtkView.clearColor = MTLClearColor(red: 0, green: 0, blue: 0, alpha: 0)
         mtkView.drawableSize = mtkView.frame.size

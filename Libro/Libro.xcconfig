@@ -1,0 +1,34 @@
+//
+//  Libro.xcconfig
+//  Libro
+//
+//  Created by Prayash Thapa on 2/24/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+PRODUCT_NAME = $(TARGET_NAME)
+PRODUCT_BUNDLE_IDENTIFIER = io.prayash.Libro
+
+// ************************************
+// Codesigning
+
+CODE_SIGN_ENTITLEMENTS = Libro/Libro.entitlements
+CODE_SIGN_STYLE = Automatic
+
+// ************************************
+// Arch
+
+SUPPORTED_PLATFORMS = iphoneos iphonesimulator macosx
+SDKROOT = auto
+DEVELOPMENT_ASSET_PATHS = "Libro/Preview Content"
+SWIFT_VERSION = 5.0
+
+// ************************************
+// Deployment
+
+IPHONEOS_DEPLOYMENT_TARGET = 16.2
+MACOSX_DEPLOYMENT_TARGET = 13.1
+INFOPLIST_KEY_MetalCaptureEnabled = YES
