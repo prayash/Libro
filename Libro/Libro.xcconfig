@@ -13,6 +13,12 @@ PRODUCT_NAME = $(TARGET_NAME)
 PRODUCT_BUNDLE_IDENTIFIER = io.prayash.Libro
 
 // ************************************
+// Headers
+
+SWIFT_OBJC_BRIDGING_HEADER = Libro/Libro-Bridging-Header.h
+HEADER_SEARCH_PATHS =
+
+// ************************************
 // Codesigning
 
 CODE_SIGN_ENTITLEMENTS = Libro/Libro.entitlements

@@ -11,6 +11,10 @@
 		C40C8F9729A6078000447FAB /* MTLCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C8F9629A6078000447FAB /* MTLCanvasView.swift */; };
 		C40C8F9929A6078100447FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40C8F9829A6078100447FAB /* Assets.xcassets */; };
 		C40C8F9D29A6078100447FAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40C8F9C29A6078100447FAB /* Preview Assets.xcassets */; };
+		C463B90029B71A33008E918B /* MatrixUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C463B8FF29B71A33008E918B /* MatrixUtils.m */; };
+		C463B90229B71C6A008E918B /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = C463B90129B71C6A008E918B /* Shaders.metal */; };
+		C4C6FE2029C2D1DC0074DBBB /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6FE1F29C2D1DC0074DBBB /* Renderer.swift */; };
+		C4C6FE2229C2D41D0074DBBB /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C6FE2129C2D41D0074DBBB /* Geometry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +24,13 @@
 		C40C8F9829A6078100447FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C40C8F9A29A6078100447FAB /* Libro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Libro.entitlements; sourceTree = "<group>"; };
 		C40C8F9C29A6078100447FAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C463B8FD29B71A05008E918B /* MatrixUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatrixUtils.h; sourceTree = "<group>"; };
+		C463B8FE29B71A33008E918B /* Libro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Libro-Bridging-Header.h"; sourceTree = "<group>"; };
+		C463B8FF29B71A33008E918B /* MatrixUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatrixUtils.m; sourceTree = "<group>"; };
+		C463B90129B71C6A008E918B /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		C4670AF729A9D1770090A7F0 /* Libro.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Libro.xcconfig; sourceTree = "<group>"; };
+		C4C6FE1F29C2D1DC0074DBBB /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		C4C6FE2129C2D41D0074DBBB /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +63,14 @@
 		C40C8F9329A6078000447FAB /* Libro */ = {
 			isa = PBXGroup;
 			children = (
+				C463B8FE29B71A33008E918B /* Libro-Bridging-Header.h */,
 				C40C8F9429A6078000447FAB /* LibroApp.swift */,
 				C40C8F9629A6078000447FAB /* MTLCanvasView.swift */,
+				C4C6FE2129C2D41D0074DBBB /* Geometry.swift */,
+				C4C6FE1F29C2D1DC0074DBBB /* Renderer.swift */,
+				C463B8FD29B71A05008E918B /* MatrixUtils.h */,
+				C463B8FF29B71A33008E918B /* MatrixUtils.m */,
+				C463B90129B71C6A008E918B /* Shaders.metal */,
 				C40C8F9829A6078100447FAB /* Assets.xcassets */,
 				C40C8F9A29A6078100447FAB /* Libro.entitlements */,
 				C4670AF729A9D1770090A7F0 /* Libro.xcconfig */,
@@ -103,6 +119,7 @@
 				TargetAttributes = {
 					C40C8F9029A6078000447FAB = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -141,8 +158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C463B90229B71C6A008E918B /* Shaders.metal in Sources */,
+				C4C6FE2229C2D41D0074DBBB /* Geometry.swift in Sources */,
 				C40C8F9729A6078000447FAB /* MTLCanvasView.swift in Sources */,
 				C40C8F9529A6078000447FAB /* LibroApp.swift in Sources */,
+				C4C6FE2029C2D1DC0074DBBB /* Renderer.swift in Sources */,
+				C463B90029B71A33008E918B /* MatrixUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +287,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -282,6 +303,8 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MARKETING_VERSION = 1.0;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -292,8 +315,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -308,6 +331,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MARKETING_VERSION = 1.0;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
